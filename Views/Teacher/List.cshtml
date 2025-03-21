@@ -1,0 +1,27 @@
+@using MySchoolAPI.Models
+@model IEnumerable<Teacher>
+
+<h2>Teacher List</h2>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Employee Number</th>
+        <th>Hire Date</th>
+        <th>Salary</th>
+        <th>Actions</th>
+    </tr>
+    @foreach (var teacher in Model)
+    {
+        <tr>
+            <td>@teacher.TeacherId</td>
+            <td>@teacher.TeacherFname</td>
+            <td>@teacher.TeacherLname</td>
+            <td>@teacher.EmployeeNumber</td>
+            <td>@teacher.HireDate.ToShortDateString()</td>
+            <td>@teacher.Salary</td>
+            <td><a href="/Teacher/Show/@teacher.TeacherId">View Details</a></td>
+        </tr>
+    }
+</table>

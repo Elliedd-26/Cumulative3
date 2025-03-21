@@ -1,0 +1,20 @@
+@model MySchoolAPI.Models.Teacher
+
+@{
+    ViewData["Title"] = "Teacher Details";
+}
+
+<h2>Teacher Details</h2>
+
+@if (Model != null)
+{
+    <p><strong>First Name:</strong> @Model.TeacherFname</p>
+    <p><strong>Last Name:</strong> @Model.TeacherLname</p>
+    <p><strong>Employee Number:</strong> @Model.EmployeeNumber</p>
+    <p><strong>Hire Date:</strong> @Model.HireDate.ToShortDateString()</p>
+    <p><strong>Salary:</strong> @Model.Salary</p>
+}
+else
+{
+    <p>Teacher not found.</p>
+}
