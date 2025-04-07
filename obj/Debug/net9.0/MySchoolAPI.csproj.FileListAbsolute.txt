@@ -6,7 +6,12 @@
 /Users/ellie_Main/NewProject/MySchoolAPI/bin/Debug/net9.0/MySchoolAPI.runtimeconfig.json
 /Users/ellie_Main/NewProject/MySchoolAPI/bin/Debug/net9.0/MySchoolAPI.dll
 /Users/ellie_Main/NewProject/MySchoolAPI/bin/Debug/net9.0/MySchoolAPI.pdb
+/Users/ellie_Main/NewProject/MySchoolAPI/bin/Debug/net9.0/BouncyCastle.Cryptography.dll
+/Users/ellie_Main/NewProject/MySchoolAPI/bin/Debug/net9.0/Google.Protobuf.dll
 /Users/ellie_Main/NewProject/MySchoolAPI/bin/Debug/net9.0/Humanizer.dll
+/Users/ellie_Main/NewProject/MySchoolAPI/bin/Debug/net9.0/K4os.Compression.LZ4.dll
+/Users/ellie_Main/NewProject/MySchoolAPI/bin/Debug/net9.0/K4os.Compression.LZ4.Streams.dll
+/Users/ellie_Main/NewProject/MySchoolAPI/bin/Debug/net9.0/K4os.Hash.xxHash.dll
 /Users/ellie_Main/NewProject/MySchoolAPI/bin/Debug/net9.0/Microsoft.AspNetCore.OpenApi.dll
 /Users/ellie_Main/NewProject/MySchoolAPI/bin/Debug/net9.0/Microsoft.Bcl.AsyncInterfaces.dll
 /Users/ellie_Main/NewProject/MySchoolAPI/bin/Debug/net9.0/Microsoft.CodeAnalysis.dll
@@ -20,6 +25,7 @@
 /Users/ellie_Main/NewProject/MySchoolAPI/bin/Debug/net9.0/Microsoft.Extensions.DependencyModel.dll
 /Users/ellie_Main/NewProject/MySchoolAPI/bin/Debug/net9.0/Microsoft.OpenApi.dll
 /Users/ellie_Main/NewProject/MySchoolAPI/bin/Debug/net9.0/Mono.TextTemplating.dll
+/Users/ellie_Main/NewProject/MySchoolAPI/bin/Debug/net9.0/MySql.Data.dll
 /Users/ellie_Main/NewProject/MySchoolAPI/bin/Debug/net9.0/MySqlConnector.dll
 /Users/ellie_Main/NewProject/MySchoolAPI/bin/Debug/net9.0/Pomelo.EntityFrameworkCore.MySql.dll
 /Users/ellie_Main/NewProject/MySchoolAPI/bin/Debug/net9.0/Swashbuckle.AspNetCore.Swagger.dll
@@ -31,6 +37,11 @@
 /Users/ellie_Main/NewProject/MySchoolAPI/bin/Debug/net9.0/System.Composition.Hosting.dll
 /Users/ellie_Main/NewProject/MySchoolAPI/bin/Debug/net9.0/System.Composition.Runtime.dll
 /Users/ellie_Main/NewProject/MySchoolAPI/bin/Debug/net9.0/System.Composition.TypedParts.dll
+/Users/ellie_Main/NewProject/MySchoolAPI/bin/Debug/net9.0/System.Configuration.ConfigurationManager.dll
+/Users/ellie_Main/NewProject/MySchoolAPI/bin/Debug/net9.0/System.Security.Cryptography.ProtectedData.dll
+/Users/ellie_Main/NewProject/MySchoolAPI/bin/Debug/net9.0/System.Security.Permissions.dll
+/Users/ellie_Main/NewProject/MySchoolAPI/bin/Debug/net9.0/System.Windows.Extensions.dll
+/Users/ellie_Main/NewProject/MySchoolAPI/bin/Debug/net9.0/ZstdSharp.dll
 /Users/ellie_Main/NewProject/MySchoolAPI/bin/Debug/net9.0/cs/Microsoft.CodeAnalysis.resources.dll
 /Users/ellie_Main/NewProject/MySchoolAPI/bin/Debug/net9.0/de/Microsoft.CodeAnalysis.resources.dll
 /Users/ellie_Main/NewProject/MySchoolAPI/bin/Debug/net9.0/es/Microsoft.CodeAnalysis.resources.dll
@@ -83,6 +94,13 @@
 /Users/ellie_Main/NewProject/MySchoolAPI/bin/Debug/net9.0/tr/Microsoft.CodeAnalysis.Workspaces.resources.dll
 /Users/ellie_Main/NewProject/MySchoolAPI/bin/Debug/net9.0/zh-Hans/Microsoft.CodeAnalysis.Workspaces.resources.dll
 /Users/ellie_Main/NewProject/MySchoolAPI/bin/Debug/net9.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/ellie_Main/NewProject/MySchoolAPI/bin/Debug/net9.0/runtimes/win-x64/native/comerr64.dll
+/Users/ellie_Main/NewProject/MySchoolAPI/bin/Debug/net9.0/runtimes/win-x64/native/gssapi64.dll
+/Users/ellie_Main/NewProject/MySchoolAPI/bin/Debug/net9.0/runtimes/win-x64/native/k5sprt64.dll
+/Users/ellie_Main/NewProject/MySchoolAPI/bin/Debug/net9.0/runtimes/win-x64/native/krb5_64.dll
+/Users/ellie_Main/NewProject/MySchoolAPI/bin/Debug/net9.0/runtimes/win-x64/native/krbcc64.dll
+/Users/ellie_Main/NewProject/MySchoolAPI/bin/Debug/net9.0/runtimes/win/lib/net8.0/System.Diagnostics.EventLog.Messages.dll
+/Users/ellie_Main/NewProject/MySchoolAPI/bin/Debug/net9.0/runtimes/win/lib/net8.0/System.Windows.Extensions.dll
 /Users/ellie_Main/NewProject/MySchoolAPI/obj/Debug/net9.0/MySchoolAPI.csproj.AssemblyReference.cache
 /Users/ellie_Main/NewProject/MySchoolAPI/obj/Debug/net9.0/MySchoolAPI.GeneratedMSBuildEditorConfig.editorconfig
 /Users/ellie_Main/NewProject/MySchoolAPI/obj/Debug/net9.0/MySchoolAPI.AssemblyInfoInputs.cache
@@ -92,6 +110,7 @@
 /Users/ellie_Main/NewProject/MySchoolAPI/obj/Debug/net9.0/MySchoolAPI.MvcApplicationPartsAssemblyInfo.cache
 /Users/ellie_Main/NewProject/MySchoolAPI/obj/Debug/net9.0/MySchoolAPI.RazorAssemblyInfo.cache
 /Users/ellie_Main/NewProject/MySchoolAPI/obj/Debug/net9.0/MySchoolAPI.RazorAssemblyInfo.cs
+/Users/ellie_Main/NewProject/MySchoolAPI/obj/Debug/net9.0/MySchoolAPI.sourcelink.json
 /Users/ellie_Main/NewProject/MySchoolAPI/obj/Debug/net9.0/scopedcss/bundle/MySchoolAPI.styles.css
 /Users/ellie_Main/NewProject/MySchoolAPI/obj/Debug/net9.0/staticwebassets.build.json
 /Users/ellie_Main/NewProject/MySchoolAPI/obj/Debug/net9.0/staticwebassets.development.json

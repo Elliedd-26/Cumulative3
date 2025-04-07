@@ -1,24 +1,28 @@
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using MySchoolAPI.Models;
 using System.Diagnostics;
 
-[Route("api/[controller]")]
+namespace MySchoolAPI.Controllers
+{
+    [Route("api/[controller]")]
     [ApiController]
     public class TeacherApiController : ControllerBase
     {
-        private readonly SchoolDbContext _context;
+        private readonly SchoolDbAccess _db;
 
-        public TeacherApiController(SchoolDbContext context)
+        public TeacherApiController()
         {
-            _context = context;
+            _db = new SchoolDbAccess();
         }
 
-        // GET: /api/Teacher
+        /// <summary>
+        /// Get all teachers from the database.
+        /// </summary>
+        /// <returns>A list of teachers</returns>
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Teacher>>> GetAll()
+        public IActionResult GetAll()
         {
-            var teachers = await _context.Teachers.ToListAsync();
+            var teachers = _db.GetAllTeachers();
 
             if (teachers == null || teachers.Count == 0)
             {
@@ -29,11 +33,15 @@ using System.Diagnostics;
             return Ok(teachers);
         }
 
-        // GET: /api/Teacher/{id}
+        /// <summary>
+        /// Get a teacher by ID.
+        /// </summary>
+        /// <param name="id">Teacher ID</param>
+        /// <returns>Teacher object</returns>
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetById(int id)
+        public IActionResult GetById(int id)
         {
-            var teacher = await _context.Teachers.FindAsync(id);
+            var teacher = _db.GetTeacherById(id);
 
             if (teacher == null)
             {
@@ -44,9 +52,13 @@ using System.Diagnostics;
             return Ok(teacher);
         }
 
-        // POST: /api/Teacher
+        /// <summary>
+        /// Add a new teacher.
+        /// </summary>
+        /// <param name="teacher">Teacher object</param>
+        /// <returns>Result message</returns>
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] Teacher teacher)
+        public IActionResult Create([FromBody] Teacher teacher)
         {
             if (teacher == null)
             {
@@ -54,12 +66,29 @@ using System.Diagnostics;
                 return BadRequest("Teacher info cannot be empty.");
             }
 
+            _db.AddTeacher(teacher);
 
-            _context.Teachers.Add(teacher);
-            await _context.SaveChangesAsync();
+            Debug.WriteLine($"API: New teacher added.");
 
-            Debug.WriteLine($"API: New teacher added with ID {teacher.TeacherId}");
+            return Ok("Teacher added successfully");
+        }
 
-            return CreatedAtAction(nameof(GetById), new { id = teacher.TeacherId }, teacher);
+        /// <summary>
+        /// Delete a teacher by ID.
+        /// </summary>
+        /// <param name="id">Teacher ID</param>
+        /// <returns>Status</returns>
+        [HttpDelete("{id}")]
+        public IActionResult Delete(int id)
+        {
+            var teacher = _db.GetTeacherById(id);
+            if (teacher == null)
+            {
+                return NotFound($"No teacher found with ID {id}");
+            }
+
+            _db.DeleteTeacher(id);
+            return Ok($"Teacher with ID {id} has been deleted.");
         }
     }
+}

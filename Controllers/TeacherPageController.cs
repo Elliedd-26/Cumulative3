@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using MySchoolAPI.Models;
 using System.Diagnostics;
 
@@ -8,35 +7,35 @@ namespace MySchoolAPI.Controllers
     [Route("Teacher")]
     public class TeacherController : Controller
     {
-        private readonly SchoolDbContext _context;
+        private readonly SchoolDbAccess _db;
 
-        public TeacherController(SchoolDbContext context)
+        public TeacherController()
         {
-            _context = context;
+            _db = new SchoolDbAccess();
         }
 
         // GET: /Teacher/ or /Teacher/List
         [HttpGet("")]
         [HttpGet("List")]
-        public async Task<IActionResult> List()
+        public IActionResult List()
         {
-            var teacherList = await _context.Teachers.ToListAsync();
+            var teacherList = _db.GetAllTeachers();
 
             if (teacherList == null || teacherList.Count == 0)
             {
                 Debug.WriteLine("No teachers found in the database.");
                 ViewBag.Message = "No teachers found.";
-                return View(new List<Teacher>()); // Pass empty list to avoid null view model
+                return View(new List<Teacher>()); // 传入空列表以避免视图为 null
             }
 
-            return View(teacherList); // /Views/Teacher/List.cshtml
+            return View(teacherList); // → /Views/Teacher/List.cshtml
         }
 
         // GET: /Teacher/Show/{id}
         [HttpGet("Show/{id}")]
-        public async Task<IActionResult> Show(int id)
+        public IActionResult Show(int id)
         {
-            var teacher = await _context.Teachers.FindAsync(id);
+            var teacher = _db.GetTeacherById(id);
 
             if (teacher == null)
             {
@@ -44,7 +43,7 @@ namespace MySchoolAPI.Controllers
                 return NotFound($"No teacher found with ID {id}");
             }
 
-            return View(teacher); // /Views/Teacher/Show.cshtml
+            return View(teacher); // → /Views/Teacher/Show.cshtml
         }
     }
 }

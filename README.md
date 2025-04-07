@@ -22,20 +22,27 @@ This project is a teachers management system based on  **ASP.NET Core MVC and We
 ---
 
 
-## How to Run
-```bash
-dotnet run
-```
----
-Once the server is running, access: "http://localhost:5270"
-(Replace 5270 with your actual port if different.)
-## Testing with cURL
-```bash
-# Get all teachers
-curl -X GET http://localhost:5270/api/TeacherApi
-```
+## 📚 API Documentation Example
 
-# Get a specific teacher (ID = 1)
-```bash
-curl -X GET http://localhost:5270/api/TeacherApi/1
-```
+### 🔸 Get All Teachers
+
+**Endpoint:** `GET /api/TeacherApi`
+
+**Description:** Returns a list of all teachers in the database.
+
+**Returns:** JSON array of teacher objects.
+
+---
+
+### 🔸 Get Teacher by ID
+
+**Endpoint:** `GET /api/TeacherApi/{id}`
+
+**Parameters:**
+- `id`: Teacher ID (integer)
+
+**Returns:**
+- `200 OK`: Teacher object if found
+- `404 Not Found`: If teacher with given ID doesn't exist
+
+
