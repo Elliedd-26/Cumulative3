@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "mMpXF3MRbfM=",
+  "dgSpecHash": "l4/lqTUbqRo=",
   "success": true,
-  "projectFilePath": "/Users/ellie_Main/NewProject/MySchoolAPI/MySchoolAPI.csproj",
+  "projectFilePath": "/Users/ellie_Main/Cumulative 3/MySchoolAPI.csproj",
   "expectedPackageFiles": [
-    "/Users/ellie_Main/.nuget/packages/bouncycastle.cryptography/2.3.1/bouncycastle.cryptography.2.3.1.nupkg.sha512",
-    "/Users/ellie_Main/.nuget/packages/google.protobuf/3.26.1/google.protobuf.3.26.1.nupkg.sha512",
+    "/Users/ellie_Main/.nuget/packages/bouncycastle.cryptography/2.5.1/bouncycastle.cryptography.2.5.1.nupkg.sha512",
+    "/Users/ellie_Main/.nuget/packages/google.protobuf/3.30.0/google.protobuf.3.30.0.nupkg.sha512",
     "/Users/ellie_Main/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/Users/ellie_Main/.nuget/packages/k4os.compression.lz4/1.3.8/k4os.compression.lz4.1.3.8.nupkg.sha512",
     "/Users/ellie_Main/.nuget/packages/k4os.compression.lz4.streams/1.3.8/k4os.compression.lz4.streams.1.3.8.nupkg.sha512",
@@ -38,7 +38,7 @@
     "/Users/ellie_Main/.nuget/packages/microsoft.netcore.targets/1.1.0/microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "/Users/ellie_Main/.nuget/packages/microsoft.openapi/1.6.23/microsoft.openapi.1.6.23.nupkg.sha512",
     "/Users/ellie_Main/.nuget/packages/mono.texttemplating/2.2.1/mono.texttemplating.2.2.1.nupkg.sha512",
-    "/Users/ellie_Main/.nuget/packages/mysql.data/9.2.0/mysql.data.9.2.0.nupkg.sha512",
+    "/Users/ellie_Main/.nuget/packages/mysql.data/9.3.0/mysql.data.9.3.0.nupkg.sha512",
     "/Users/ellie_Main/.nuget/packages/mysqlconnector/2.3.5/mysqlconnector.2.3.5.nupkg.sha512",
     "/Users/ellie_Main/.nuget/packages/pomelo.entityframeworkcore.mysql/8.0.3/pomelo.entityframeworkcore.mysql.8.0.3.nupkg.sha512",
     "/Users/ellie_Main/.nuget/packages/swashbuckle.aspnetcore/8.0.0/swashbuckle.aspnetcore.8.0.0.nupkg.sha512",
@@ -74,7 +74,7 @@
     "/Users/ellie_Main/.nuget/packages/system.threading.tasks/4.3.0/system.threading.tasks.4.3.0.nupkg.sha512",
     "/Users/ellie_Main/.nuget/packages/system.threading.tasks.extensions/4.5.4/system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "/Users/ellie_Main/.nuget/packages/system.windows.extensions/8.0.0/system.windows.extensions.8.0.0.nupkg.sha512",
-    "/Users/ellie_Main/.nuget/packages/zstdsharp.port/0.8.0/zstdsharp.port.0.8.0.nupkg.sha512"
+    "/Users/ellie_Main/.nuget/packages/zstdsharp.port/0.8.5/zstdsharp.port.0.8.5.nupkg.sha512"
   ],
   "logs": []
 }

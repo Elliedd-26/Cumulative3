@@ -89,5 +89,29 @@ namespace MySchoolAPI.Models
                 cmd.ExecuteNonQuery();
             }
         }
+
+        public void UpdateTeacher(int id, Teacher teacher)
+{
+    using (MySqlConnection conn = new MySqlConnection(connectionString))
+    {
+        conn.Open();
+        string query = @"UPDATE Teachers SET 
+                            teacherfname = @fname,
+                            teacherlname = @lname,
+                            employeenumber = @empno,
+                            hiredate = @hiredate,
+                            salary = @salary
+                         WHERE teacherid = @id";
+        MySqlCommand cmd = new MySqlCommand(query, conn);
+        cmd.Parameters.AddWithValue("@fname", teacher.TeacherFname);
+        cmd.Parameters.AddWithValue("@lname", teacher.TeacherLname);
+        cmd.Parameters.AddWithValue("@empno", teacher.EmployeeNumber);
+        cmd.Parameters.AddWithValue("@hiredate", teacher.HireDate);
+        cmd.Parameters.AddWithValue("@salary", teacher.Salary);
+        cmd.Parameters.AddWithValue("@id", id);
+        cmd.ExecuteNonQuery();
+    }
+}
+
     }
 }

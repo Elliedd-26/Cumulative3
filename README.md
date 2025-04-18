@@ -1,48 +1,25 @@
 # MySchoolAPI - ASP.NET Core Web API & MVC
 
 📌 **Details**  
-This project is a teachers management system based on  **ASP.NET Core MVC and Web API** achieving **CRUD** 's read function  
+This project is a teachers management system based on  **ASP.NET Core MVC and Web API** achieving **CRUD** 's read, delete and update function  
 
 ---
 ## 📑 Project Structure
-```bash
 /MySchoolAPI
 │── /Controllers
-│   ├── TeacherController.cs        # MVC Controller (Returns Views)
+│   ├── TeacherController.cs        # MVC Controller (Views: List, Show, Edit)
 │   ├── TeacherApiController.cs     # API Controller (Returns JSON)
 │── /Models
 │   ├── Teacher.cs                  # Teacher Data Model
-│   ├── SchoolDbContext.cs          # Database Context
+│   ├── SchoolDbContext.cs          # EF Core DbContext
+│   ├── SchoolDbAccess.cs           # Manual DB access using MySQL
 │── /Views
-│   ├── /Teacher
+│   └── /Teacher
 │       ├── List.cshtml              # Displays all teachers
 │       ├── Show.cshtml              # Displays a single teacher
+│       ├── Edit.cshtml              # Edit form with validation
 │── README.md                        # Project Documentation
-```
----
 
 
-## 📚 API Documentation Example
-
-### 🔸 Get All Teachers
-
-**Endpoint:** `GET /api/TeacherApi`
-
-**Description:** Returns a list of all teachers in the database.
-
-**Returns:** JSON array of teacher objects.
-
----
-
-### 🔸 Get Teacher by ID
-
-**Endpoint:** `GET /api/TeacherApi/{id}`
-
-**Parameters:**
-- `id`: Teacher ID (integer)
-
-**Returns:**
-- `200 OK`: Teacher object if found
-- `404 Not Found`: If teacher with given ID doesn't exist
 
 

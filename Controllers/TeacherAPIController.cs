@@ -90,5 +90,42 @@ namespace MySchoolAPI.Controllers
             _db.DeleteTeacher(id);
             return Ok($"Teacher with ID {id} has been deleted.");
         }
+
+        /// <summary>
+/// Update an existing teacher.
+/// </summary>
+/// <param name="id">Teacher ID</param>
+/// <param name="teacher">Updated teacher object</param>
+/// <returns>Status</returns>
+[HttpPut("{id}")]
+public IActionResult Update(int id, [FromBody] Teacher teacher)
+{
+    var existing = _db.GetTeacherById(id);
+    if (existing == null)
+    {
+        return NotFound($"No teacher found with ID {id}");
+    }
+
+    // ✅ 服务器端验证
+    if (string.IsNullOrWhiteSpace(teacher.TeacherFname) || string.IsNullOrWhiteSpace(teacher.TeacherLname))
+    {
+        return BadRequest("Teacher name cannot be empty.");
+    }
+
+    if (teacher.HireDate > DateTime.Now)
+    {
+        return BadRequest("Hire date cannot be in the future.");
+    }
+
+    if (teacher.Salary < 0)
+    {
+        return BadRequest("Salary cannot be negative.");
+    }
+
+    _db.UpdateTeacher(id, teacher);
+
+    return Ok($"Teacher with ID {id} has been updated.");
+}
+
     }
 }

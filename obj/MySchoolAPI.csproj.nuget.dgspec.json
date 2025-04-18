@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/ellie_Main/NewProject/MySchoolAPI/MySchoolAPI.csproj": {}
+    "/Users/ellie_Main/Cumulative 3/MySchoolAPI.csproj": {}
   },
   "projects": {
-    "/Users/ellie_Main/NewProject/MySchoolAPI/MySchoolAPI.csproj": {
+    "/Users/ellie_Main/Cumulative 3/MySchoolAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/ellie_Main/NewProject/MySchoolAPI/MySchoolAPI.csproj",
+        "projectUniqueName": "/Users/ellie_Main/Cumulative 3/MySchoolAPI.csproj",
         "projectName": "MySchoolAPI",
-        "projectPath": "/Users/ellie_Main/NewProject/MySchoolAPI/MySchoolAPI.csproj",
+        "projectPath": "/Users/ellie_Main/Cumulative 3/MySchoolAPI.csproj",
         "packagesPath": "/Users/ellie_Main/.nuget/packages/",
-        "outputPath": "/Users/ellie_Main/NewProject/MySchoolAPI/obj/",
+        "outputPath": "/Users/ellie_Main/Cumulative 3/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/ellie_Main/.nuget/NuGet/NuGet.Config"
@@ -70,7 +70,7 @@
             },
             "MySql.Data": {
               "target": "Package",
-              "version": "[9.2.0, )"
+              "version": "[9.3.0, )"
             },
             "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",

@@ -1,0 +1,46 @@
+@model MySchoolAPI.Models.Teacher
+
+@{
+    ViewData["Title"] = "Edit Teacher";
+}
+
+<h2>Edit Teacher</h2>
+
+<form asp-action="Edit" asp-route-id="@Model.TeacherId" method="post">
+    <input type="hidden" name="TeacherId" value="@Model.TeacherId" />
+    
+    <div>
+        <label>First Name:</label>
+        <input name="TeacherFname" value="@Model.TeacherFname" />
+    </div>
+    <div>
+        <label>Last Name:</label>
+        <input name="TeacherLname" value="@Model.TeacherLname" />
+    </div>
+    <div>
+        <label>Employee Number:</label>
+        <input name="EmployeeNumber" value="@Model.EmployeeNumber" />
+    </div>
+    <div>
+        <label>Hire Date:</label>
+        <input name="HireDate" type="date" value="@Model.HireDate.ToString("yyyy-MM-dd")" />
+    </div>
+    <div>
+        <label>Salary:</label>
+        <input name="Salary" type="number" step="0.01" value="@Model.Salary" />
+    </div>
+    <br />
+
+    @if (!ViewData.ModelState.IsValid)
+{
+    <div style="color:red; margin-top: 10px;">
+        @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+        {
+            <p>@error.ErrorMessage</p>
+        }
+    </div>
+}
+    <button type="submit">Update</button>
+</form>
+
+<a href="/Teacher/List">← Back to List</a>
